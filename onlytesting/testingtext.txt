@@ -1,0 +1,7 @@
+<div class="myDiv">
+            <label style="color: black;">Email</label><br>
+            <input type="email"></input><br><br>
+            <label  style="color: black;">Password</label><br>
+            <input type="password"></input><br><br>
+            <button style="align-items: center;">Submit</button>
+        </div>
