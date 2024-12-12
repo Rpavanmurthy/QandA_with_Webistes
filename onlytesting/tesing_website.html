@@ -18,38 +18,41 @@
 
         /* Set a style for all buttons */
         button {
-            background-color: #04AA6D;
+            background-color: #0b9c1e;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
             border: none;
             cursor: pointer;
-            width: 100%;
+            width: 30%;
+
         }
         /* Add a hover effect for buttons */
         button:hover {
-            opacity: 0.8;
+            opacity: 0.7;
         }
         /* Extra style for the cancel button (red) */
         .cancelbtn {
             width: auto;
             padding: 10px 18px;
-            background-color: #f44336;
+            background-color: #fd1302;
         }
         /* Center the avatar image inside this container */
-        .imgcontainer {
-            text-align: center;
-            margin: 40px 0 30px 0;
-        }
-        /* Avatar image */
-        img.avatar {
-            width: 60%;
-            border-radius: 40%;
-        }
-        /* Add padding to containers */
         .container {
-            padding: 16px;
-            background-color: black;
+            display: inline-block; /* Ensures the container wraps tightly around the image */
+            border: 2px solid #171717; /* Example border */
+            padding: 2px; /* Optional padding around the image */
+            background-color: #0e0d0d44; /* Optional background color */
+            
+        }
+
+        .container img {
+            display: block; /* Removes any extra whitespace around the image */
+            max-width: 100%; /* Makes the image responsive */
+            height: auto; /* Maintains aspect ratio */
+        }
+        .centering{
+            text-align: center;
         }
         /* The "Forgot password" text */
         span.psw {
@@ -70,26 +73,32 @@
     </head>
     <body class="myBody">
         <form action="action_page.php" method="post">
-            <div class="imgcontainer">
-              <img src="IMG_20240717_142249270.jpg" class="avatar">
+            <div class="container">
+              <img src="IMG_20241110_161410905.jpg" alt="Example Image">
             </div>
 
+            <div class="centering">
             <div class="container">
-              <label style ="color: grey;"for="uname"><b>Username</b></label>
+              <label style ="color: black;"for="uname"><b>Username</b></label>
               <input type="text" placeholder="Enter Username" name="uname" required>
           
-              <label style ="color: grey;"for="psw"><b>Password</b></label>
+              <label style ="color: black;"for="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="submit">Login</button>
+              <div class="centering">
+                <button type="submit">Login</button>
+              </div>              
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
               </label>
             </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="button" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+            <br>
+            
+            <div style="padding-top:10px;" class="centering">
+            <div class="container" style="background-color:#dfd6d681">
+              <button type="button" class="cancelbtn">Cancel</button><br>
+              <span class="psw">Forgot <a href="http://127.0.0.1:5500/onlytesting/chatgpt_example.html">password?</a></span>
+            </div>
             </div>
           </form>
     </body>
